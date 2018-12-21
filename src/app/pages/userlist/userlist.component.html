@@ -1,6 +1,6 @@
 <main class="container">
   <div class="columns">
-    <div class="column">
+    <div class="column" *ngFor="let user of userList">
       <div class="card">
         <!-- <div class="card-image">
           <figure class="image is-4by3">
@@ -10,24 +10,24 @@
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                <img src="{{user.avatar}}" alt="Placeholder image">
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">First Name</p>
-              <p class="subtitle is-6">last name</p>
+              <p class="title is-4">{{user.first_name}}</p>
+              <p class="subtitle is-6">{{user.last_name}}</p>
             </div>
           </div>
 
           <div class="content">
-            Dummy User with user id - x.
+            Dummy User with user id - {{user.id}}.
             <br>
             <!-- <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> -->
           </div>
         </div>
       </div>
     </div>
-    <div class="column">
+    <!-- <div class="column">
       Second column
     </div>
     <div class="column">
@@ -35,6 +35,6 @@
     </div>
     <div class="column">
       Fourth column
-    </div>
+    </div> -->
   </div>
 </main>
