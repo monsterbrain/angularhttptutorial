@@ -17,9 +17,13 @@
 </div>
 <div class="tabs is-centered is-boxed is-medium">
   <ul>
-    <li class="is-active"><a>Users List</a></li>
-    <li><a href="resources">Resource List</a></li>
-    <li><a>Register</a></li>
+      <!-- class="is-active" -->
+    <li [class.is-active]="currentUrl=='/'">
+      <a [routerLink]="[ '/' ]" routerLinkActive="currentUrl!='/'">Users List</a></li>
+    <li [class.is-active]="currentUrl=='/resources'">
+      <a [routerLink]="[ '/resources' ]" routerLinkActive="currentUrl!='/resources'">Resource List</a>
+    </li>
+    <li><a href="">Register</a></li>
     <li><a>Login</a></li>
   </ul>
 </div>
