@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { UserlistComponent } from './pages/userlist/userlist.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ResourcelistComponent } from './pages/resourcelist/resourcelist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserlistComponent
+    UserlistComponent,
+    ResourcelistComponent
   ],
   imports: [
     BrowserModule,

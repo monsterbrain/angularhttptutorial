@@ -1,0 +1,40 @@
+<main class="container">
+  <div class="columns">
+    <div class="column" *ngFor="let res of resList">
+      <div class="card">
+        <!-- <div class="card-image">
+          <figure class="image is-4by3">
+          </figure>
+        </div> -->
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <div class="image is-48x48" [style.background-color]="res.color"></div>
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">{{res.name}}</p>
+              <p class="subtitle is-6">year {{res.year}}</p>
+            </div>
+          </div>
+
+          <div class="content">
+            val : {{res.pantone_value}}  &nbsp; &nbsp; id : {{res.id}}
+            <br>
+            <!-- <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="column">
+      Second column
+    </div>
+    <div class="column">
+      Third column
+    </div>
+    <div class="column">
+      Fourth column
+    </div> -->
+  </div>
+</main>
