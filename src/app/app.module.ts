@@ -7,15 +7,20 @@ import { UserlistComponent } from './pages/userlist/userlist.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ResourcelistComponent } from './pages/resourcelist/resourcelist.component';
+import { RegisterComponent } from './pages/register/register.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserlistComponent,
-    ResourcelistComponent
+    ResourcelistComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

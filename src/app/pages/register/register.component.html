@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <h1 class="title is-center">Register User</h1>
+      <form>
+        <div class="field form-group">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input form-control" type="text" placeholder="email"
+              name="email"
+              [(ngModel)]="userModel.email">
+          </div>
+        </div>
+
+        <div class="field form-group">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input form-control" type="password" placeholder="Password" name="password"
+            [(ngModel)]="userModel.password">
+          </div>
+        </div>
+
+        <button type="submit" class="button is-success" (click)="onSubmit()">Submit</button>
+        <p *ngIf="isSuccess" class="help is-success">Token Success</p>
+        <p *ngIf="isFailed" class="help is-danger">Error Response</p>
+      </form>
+    </div>
+  </div>
+</div>
