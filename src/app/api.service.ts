@@ -52,6 +52,7 @@ export class ApiService {
   UserListUrl = 'https://reqres.in/api/users';
   ResourceListUrl = 'https://reqres.in/api/unknown';
   RegisterUserUrl = 'https://reqres.in/api/register';
+  LoginUserUrl = 'https://reqres.in/api/login';
 
   constructor(private http: HttpClient) { }
 
@@ -71,6 +72,19 @@ export class ApiService {
     };
 
     return this.http.post<ILoginResponse>(this.RegisterUserUrl, loginData, httpOptions)
+      .pipe(
+        catchError(err => this.handleError(err))
+      );
+  }
+
+  loginUser(loginData: IUserLoginData): Observable<ILoginResponse> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.post<ILoginResponse>(this.LoginUserUrl, loginData, httpOptions)
       .pipe(
         catchError(err => this.handleError(err))
       );

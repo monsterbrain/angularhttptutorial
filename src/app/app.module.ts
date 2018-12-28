@@ -10,13 +10,15 @@ import { ResourcelistComponent } from './pages/resourcelist/resourcelist.compone
 import { RegisterComponent } from './pages/register/register.component';
 
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserlistComponent,
     ResourcelistComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
