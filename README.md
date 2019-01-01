@@ -2,11 +2,11 @@
 
 ## A tutorial on angular 7 http web services.
 
-- Technology 	- Angular 7
+- Technology 	- **[Angular 7](https://angular.io/)**
 - Language	- Typescript (compiled to Javascript)
-- Styling		- Bulma (pure css framework)
-- Api Server	- Reqres.in (Fake Api Json Responses)
-- Code Editor	- Visual Studio Code
+- Styling		- **[Bulma (pure css framework)](https://bulma.io/)**
+- Api Server	- **[Reqres.in](https://reqres.in/)** (Fake Api Json Responses)
+- Code Editor	- **[Visual Studio Code](https://code.visualstudio.com/)**
 
 ## [View Written Tutorial](https://monsterbrain.github.io/angularhttptutorial/tutorial/)
 
