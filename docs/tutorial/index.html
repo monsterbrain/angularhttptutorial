@@ -36,7 +36,7 @@
       <tbody>
         <tr>
           <td>Frontend Framework</td>
-          <td>Angular 7</td>
+          <td><a href="https://angular.io/">Angular 7</a></td>
         </tr>
         <tr>
           <td>Language</td>
@@ -44,15 +44,15 @@
         </tr>
         <tr>
           <td>Styling (CSS)</td>
-          <td>Bulma (pure css framework)</td>
+          <td><a href="https://bulma.io/">Bulma (pure css framework)</a></td>
         </tr>
         <tr>
           <td>Api Server</td>
-          <td>Reqres.in (Fake Api Json Responses)</td>
+          <td><a href="Reqres.in">Reqres.in (Fake Api Json Responses)</a></td>
         </tr>
         <tr>
           <td>Code Editor</td>
-          <td>Visual Studio Code</td>
+          <td><a href="https://code.visualstudio.com/">Visual Studio Code</a></td>
         </tr>
         <tr>
           <td>Interface Creator</td>
@@ -62,31 +62,41 @@
     </table>
   </div>
 
-  <div class="container">
-    <h1 class="title">To be continued !!</h1>
-  </div>
+  <!-- Creating the Angular project -->
+  <section>
+    <div class="container">
+      <br>
+      <h2 class="title">Creating the Angular project</h2>
+      <p>Please refer this official doc <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></p>
+      <p>Install <b>node js</b> (if you haven't)</p>
+      <p>To Create new App : <code>ng new my-app</code></p>
+      <p>To Run the project: <code>cd my-app</code> and then <code>ng serve -o</code></p>
+    </div>
+  </section>
 
-  <div class="container">
-    <pre>
-        <code class="language-javascript">
-            var Prism = (function(){
-                // Private helper vars
-                var lang = /\blang(?:uage)?-([\w-]+)\b/i;
-                var uniqueId = 0;
-            }
-        </code>
-    </pre>
-  </div>
+  <!-- Styling the Page using Bulma -->
+  <section>
+    <div class="container">
+      <br>
+      <h2 class="title">Styling the Page using Bulma</h2>
+      <p>Download <a href="https://bulma.io/">Bulma</a>. Copy <b>bulma.min.css</b> file into <b>src-assets folder</b></p>
+      <p>In styles.css file add the import</p>
+      <p><code>@import "assets/css/bulma.min.css";</code></p>
+      <br>
+      <p>Add a Hero Section showing the Title and subtitle. (Ref : <a href="https://bulma.io/documentation/layout/hero/">https://bulma.io/documentation/layout/hero/</a>)</p>
+      <br>
+      <p>Add Menu Tabs. (Ref: <a href="https://bulma.io/documentation/components/tabs/">https://bulma.io/documentation/components/tabs/</a>)</p>
+      <br>
+      <p>Now our menu will look like this</p>
+      <img src="img/1_header.png" alt="site header" style="border:2px solid #AAA;">
+    </div>
+  </section>
 
   <div class="columns is-centered">
     <div class="column is-half">
-
+      <h2 class="title">To be continued</h2>
     </div>
   </div>
-
-
-
-  <script src="js/prism.js"></script>
 </body>
 
 </html>

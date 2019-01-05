@@ -328,12 +328,12 @@ textarea {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-/*code,
+code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-family: monospace;
-}*/
+}
 
 body {
   color: #4a4a4a;
@@ -356,13 +356,13 @@ a:hover {
   color: #363636;
 }
 
-/*code {
+code {
   background-color: whitesmoke;
   color: #ff3860;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em;
-}*/
+}
 
 hr {
   background-color: whitesmoke;
@@ -396,7 +396,7 @@ strong {
   font-weight: 700;
 }
 
-/*pre {
+pre {
   -webkit-overflow-scrolling: touch;
   background-color: whitesmoke;
   color: #4a4a4a;
@@ -405,14 +405,14 @@ strong {
   padding: 1.25rem 1.5rem;
   white-space: pre;
   word-wrap: normal;
-}*/
+}
 
-/*pre code {
+pre code {
   background-color: transparent;
   color: currentColor;
   font-size: 1em;
   padding: 0;
-}*/
+}
 
 table td,
 table th {
@@ -4476,14 +4476,14 @@ a.box:active {
   color: currentColor;
 }
 
-/*.notification code,
+.notification code,
 .notification pre {
   background: white;
-}*/
+}
 
-/*.notification pre code {
+.notification pre code {
   background: transparent;
-}*/
+}
 
 .notification > .delete {
   position: absolute;
@@ -5487,9 +5487,9 @@ button.dropdown-item.is-active {
   justify-content: space-between;
 }
 
-/*.level code {
+.level code {
   border-radius: 4px;
-}*/
+}
 
 .level img {
   display: inline-block;
@@ -5960,14 +5960,14 @@ a.list-item {
   padding: 1.25em 1.5em;
 }
 
-/*.message-body code,
+.message-body code,
 .message-body pre {
   background-color: white;
-}*/
+}
 
-/*.message-body pre code {
+.message-body pre code {
   background-color: transparent;
-}*/
+}
 
 .modal {
   align-items: center;
