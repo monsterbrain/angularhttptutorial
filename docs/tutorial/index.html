@@ -92,11 +92,34 @@
     </div>
   </section>
 
-  <div class="columns is-centered">
-    <div class="column is-half">
-      <h2 class="title">To be continued</h2>
+  <section>
+    <div class="container">
+      <br>
+      <h2 class="title">Add User List Component</h2>
+      <br>
+      <p>Create Component UserList in pages folder :  <code>ng g c pages/userlist</code></p>
+      <br>
+      <p>Add it to Routes. ie Set User List Component as default starting component, in <b>app-routing.module.ts</b>.</p>
+      <code>
+        const routes: Routes = [ <br>
+        &nbsp;&nbsp;{ <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; path: '', // default path <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; component: UserlistComponent <br>
+      &nbsp;&nbsp;} <br>
+      ];
+      </code>
+      <br> <br>
+      <p>Then add some columns for user list html page.</p>
+      <p>(Ref : <a href="https://bulma.io/documentation/columns/basics/">https://bulma.io/documentation/columns/basics/</a>)</p>
+      <br>
+      <p>Added a card component for user Ref : <a href="https://bulma.io/documentation/components/card/">bulma.io/documentation/components/card/</a></p>
+      <br>
+      <p>End Result will look like this</p>
+      <img src="img/2_userlist_component.png" alt="userlist component" style="border:2px solid #AAA;">
     </div>
-  </div>
+  </section>
+
+  
 </body>
 
 </html>
