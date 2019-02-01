@@ -97,16 +97,16 @@
       <br>
       <h2 class="title">Add User List Component</h2>
       <br>
-      <p>Create Component UserList in pages folder :  <code>ng g c pages/userlist</code></p>
+      <p>Create Component UserList in pages folder : <code>ng g c pages/userlist</code></p>
       <br>
       <p>Add it to Routes. ie Set User List Component as default starting component, in <b>app-routing.module.ts</b>.</p>
       <code>
         const routes: Routes = [ <br>
         &nbsp;&nbsp;{ <br>
-      &nbsp;&nbsp;&nbsp;&nbsp; path: '', // default path <br>
-      &nbsp;&nbsp;&nbsp;&nbsp; component: UserlistComponent <br>
-      &nbsp;&nbsp;} <br>
-      ];
+        &nbsp;&nbsp;&nbsp;&nbsp; path: '', // default path <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; component: UserlistComponent <br>
+        &nbsp;&nbsp;} <br>
+        ];
       </code>
       <br> <br>
       <p>Then add some columns for user list html page.</p>
@@ -119,7 +119,43 @@
     </div>
   </section>
 
-  
+  <section>
+    <div class="container">
+      <br>
+      <h2 class="title">Getting List of users</h2>
+      <br>
+      <p>Ref : <a href="https://angular.io/guide/http">angular.io/guide/http</a></p>
+      <p>Our Api URL : <a href="https://reqres.in/api/users">https://reqres.in/api/users</a>.</p>
+      <br>
+      <p>Import <b>HttpClientModule</b>, in <code>app.module.ts</code></p>
+      <p>Create an api data service component - <code>ng g s api</code></p>
+      <br>
+      <p>In <code>api.service.ts</code> file generated, inject the <b>HttpClient</b> in the constructor</p>
+      <br>
+      <code>
+        constructor(private http: HttpClient) { }
+      </code>
+      <p>Create function</p>
+      <code>
+        getUserList() {
+        &nbsp;&nbsp;return this.http.get(this.UserListUrl);
+        }
+      </code>
+      <div>
+        Where UserListUrl = '<a href="https://reqres.in/api/users">https://reqres.in/api/users</a>';
+      </div>
+      <br> <br>
+      <p>Then add some columns for user list html page.</p>
+      <p>(Ref : <a href="https://bulma.io/documentation/columns/basics/">https://bulma.io/documentation/columns/basics/</a>)</p>
+      <br>
+      <p>Added a card component for user Ref : <a href="https://bulma.io/documentation/components/card/">bulma.io/documentation/components/card/</a></p>
+      <br>
+      <p>End Result will look like this</p>
+      <img src="img/2_userlist_component.png" alt="userlist component" style="border:2px solid #AAA;">
+    </div>
+  </section>
+
+
 </body>
 
 </html>
