@@ -1,7 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
-import { throwError, Observable } from 'rxjs';
+import { catchError, delay } from 'rxjs/operators';
+import { throwError, Observable, of } from 'rxjs';
+
+const MOCK_USER_LIST: IUserListData = {
+  page: 1,
+  per_page: 6,
+  total: 12,
+  total_pages: 2,
+  data: [
+    { id: 1, first_name: "George", last_name: "Bluth", avatar: "https://placehold.net/avatar.png" },
+    { id: 2, first_name: "Janet", last_name: "Weaver", avatar: "https://placehold.net/avatar-2.png" },
+    { id: 3, first_name: "Emma", last_name: "Wong", avatar: "https://placehold.net/avatar-4.png" }
+  ]
+};
+
+const MOCK_RES_LIST: IResListData = {
+  page: 1,
+  per_page: 6,
+  total: 12,
+  total_pages: 2,
+  data: [
+    { id: 1, name: "cerulean", year: 2000, color: "#98B2D1", pantone_value: "15-4020" },
+    { id: 2, name: "fuchsia rose", year: 2001, color: "#C74375", pantone_value: "17-2031" },
+    { id: 3, name: "true red", year: 2002, color: "#BF1932", pantone_value: "19-1664" }
+  ]
+};
 
 export interface IResListData {
   page: number;
@@ -56,38 +80,26 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getUserList() {
-    return this.http.get<IUserListData>(this.UserListUrl);
+  getUserList(): Observable<IUserListData> {
+    return of(MOCK_USER_LIST).pipe(delay(500));
   }
 
-  getResourceList() {
-    return this.http.get<IResListData>(this.ResourceListUrl);
+  getResourceList(): Observable<IResListData> {
+    return of(MOCK_RES_LIST).pipe(delay(500));
   }
 
   registerUser(loginData: IUserLoginData): Observable<ILoginResponse> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-
-    return this.http.post<ILoginResponse>(this.RegisterUserUrl, loginData, httpOptions)
-      .pipe(
-        catchError(err => this.handleError(err))
-      );
+    if (loginData.email && loginData.password) {
+      return of({ token: 'QpwL5tke4Pnpja7X4' }).pipe(delay(500));
+    }
+    return throwError('Missing email or password');
   }
 
   loginUser(loginData: IUserLoginData): Observable<ILoginResponse> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-
-    return this.http.post<ILoginResponse>(this.LoginUserUrl, loginData, httpOptions)
-      .pipe(
-        catchError(err => this.handleError(err))
-      );
+    if (loginData.email && loginData.password) {
+      return of({ token: 'QpwL5tke4Pnpja7X4' }).pipe(delay(500));
+    }
+    return throwError('Missing email or password');
   }
 
   private handleError(error: HttpErrorResponse) {

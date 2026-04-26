@@ -9,16 +9,18 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentUrl: string;
-  title = 'angular7httptutorial';
+  currentUrl: string = '';
+  title = 'angular16httptutorial';
 
   constructor(private router: Router) {
     router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(
-        (_: NavigationEnd) => {
-          this.currentUrl = _.url;
-          console.log(this.currentUrl);
+        (event: any) => {
+          if (event instanceof NavigationEnd) {
+            this.currentUrl = event.url;
+            console.log(this.currentUrl);
+          }
         });
   }
 }

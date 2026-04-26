@@ -10,7 +10,7 @@ import { ApiService, IUserListData, IUserData } from 'src/app/api.service';
 export class UserlistComponent implements OnInit {
   api: ApiService;
 
-  userListData: IUserListData;
+  userListData!: IUserListData;
   userList: IUserData[] = [];
 
   constructor(api: ApiService) {

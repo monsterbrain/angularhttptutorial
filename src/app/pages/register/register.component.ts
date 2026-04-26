@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, IUserLoginData } from 'src/app/api.service';
-import { log, error } from 'util';
 import { catchError } from 'rxjs/operators';
 
 @Component({
@@ -9,8 +8,8 @@ import { catchError } from 'rxjs/operators';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  isSuccess: boolean;
-  isFailed: boolean;
+  isSuccess: boolean = false;
+  isFailed: boolean = false;
   userModel: IUserLoginData = {} as IUserLoginData;
 
   constructor(private api: ApiService) { }

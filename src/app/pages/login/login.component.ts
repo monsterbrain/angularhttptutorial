@@ -7,8 +7,8 @@ import { IUserLoginData, ApiService } from 'src/app/api.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  isSuccess: boolean;
-  isFailed: boolean;
+  isSuccess: boolean = false;
+  isFailed: boolean = false;
   userModel: IUserLoginData = {} as IUserLoginData;
   
   constructor(private api: ApiService) { }

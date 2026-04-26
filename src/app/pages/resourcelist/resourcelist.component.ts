@@ -7,7 +7,7 @@ import { ApiService, IResListData, IResData } from 'src/app/api.service';
   styleUrls: ['./resourcelist.component.css']
 })
 export class ResourcelistComponent implements OnInit {
-  resList: IResData[];
+  resList: IResData[] = [];
 
   constructor(private api: ApiService) { }
 
